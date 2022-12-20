@@ -12,5 +12,5 @@ $result = $DB->query($sql);
 if ($result) {
     echo json_encode("Sukses Menghapus Data Mahasiswa");
 } else {
-    echo json_encode("Gagal Menghapus Data Mahasiswa");
+    echo json_encode($DB->error);
 }
