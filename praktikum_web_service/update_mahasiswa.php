@@ -1,7 +1,8 @@
 <?php
 
-header('content-type: application/json; charset=utf-8');
-require_once 'db.php';
+header('Content-Type: application/json; charset=utf-8');
+
+require_once('db.php');
 
 $nim = $_POST['nim'];
 $id_prodi = $_POST['id_prodi'];
@@ -15,12 +16,12 @@ $sql = "UPDATE mahasiswa SET
             alamat = '$alamat',
             telp = '$telp'
         WHERE
-            nim = '$nim'
+        nim = '$nim'
         ";
+         
 $result = $DB->query($sql);
-if ($result) {
-    echo json_encode("Sukses Mengubah mahasiswa");
-} else {
+if($result){
+    echo json_encode('Sukses Menambahkan Mahasiswa');
+}else{
     echo json_encode($DB->error);
 }
-?>

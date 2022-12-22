@@ -19,3 +19,4 @@
     } else {
         echo json_encode($DB->error);
     }
+?>

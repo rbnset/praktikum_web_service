@@ -37,3 +37,5 @@ if ($result) {
     echo json_encode($DB->error);
 }
 $DB->close();
+
+?>

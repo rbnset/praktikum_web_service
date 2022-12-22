@@ -14,3 +14,5 @@ if ($result) {
 } else {
     echo json_encode($DB->error);
 }
+
+?>
